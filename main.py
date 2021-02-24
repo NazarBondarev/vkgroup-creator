@@ -14,7 +14,7 @@ class GroupCreator:
     def createGroups(self, login):
         self.login = login
         vk = self.vk_session.get_api()
-        for i in range(0, 2):
+        for i in range(0, 3):
             group_name = ''.join(choice(ascii_uppercase) for i in range(6))
             group_description = ''.join(choice(ascii_uppercase) for i in range(12))
             result = vk.groups.create(title=f"{group_name}", 
